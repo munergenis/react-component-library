@@ -1,8 +1,5 @@
-# React + Vite
+# React Components Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project from Scrimba. Build using React + Tailwind. Bundled with Vite.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project pretends to be a practical way to consolidate advanced topics learned in the Advanced React Module of the Front end developer Career of Scrimba Platform. Concepts like state, side effects, and hooks are used in this project using React native hooks and Custom hooks.
