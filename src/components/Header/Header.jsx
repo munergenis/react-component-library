@@ -1,7 +1,7 @@
 const Header = ({ children, className = '', title, img = null, icon = null, ...rest }) => {
   return (
     <header
-      className={`fixed top-0 w-full p-4 md:p-8 shadow-lg ${className}`}
+      className={`fixed top-0 w-full z-10 p-4 md:p-8 shadow-lg ${className}`}
       {...rest}
     >
 
