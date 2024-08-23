@@ -6,11 +6,16 @@ const Banner = ({ status = 'success', children, className }) => {
     neutral: 'bg-blue-100 text-blue-800',
   }
 
-  const iconStyle = `bg-${status}`
+  const iconStyle = {
+    success: 'bg-success',
+    warning: 'bg-warning',
+    error: 'bg-error',
+    neutral: 'bg-neutral',
+  }
 
   return (
     <div className={`flex-1 flex gap-2 py-6 px-6 rounded max-w-xl w-full ${statusStyle[status]} ${className}`}>
-      <div className={`${iconStyle} w-10 h-10 bg-no-repeat bg-center scale-50`} />
+      <div className={`${iconStyle[status]} w-10 h-10 bg-no-repeat bg-center scale-50`} />
       <div className='py-2 flex flex-col gap-2 w-fit'>
         {children}
       </div>

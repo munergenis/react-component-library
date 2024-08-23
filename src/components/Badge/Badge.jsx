@@ -46,10 +46,8 @@ const Badge = ({ color = 'gray', shape = 'rounded', border = false, children }) 
         px-4 
         py-1 
         ${shapeStyle[shape]} 
-        ${!border && bgStyle[color]} 
         ${colorStyle[color]} 
-        ${borderStyle[color]} 
-        ${!border && 'border-transparent'}
+        ${border ? borderStyle[color] : `${bgStyle[color]} border-2 border-transparent`}
       `}
     >{children}
     </span>

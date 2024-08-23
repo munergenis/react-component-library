@@ -1,0 +1,8 @@
+import TestimonialWithImg from 'components/TestimonialWithImg/TestimonialWithImg'
+import TestimonialWithImgQuote from 'components/TestimonialWithImg/TestimonialWithImgQuote'
+import TestimonialWithImgFooter from 'components/TestimonialWithImg/TestimonialWithImgFooter'
+
+TestimonialWithImg.Quote = TestimonialWithImgQuote
+TestimonialWithImg.Footer = TestimonialWithImgFooter
+
+export default TestimonialWithImg
