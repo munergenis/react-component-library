@@ -10,6 +10,8 @@ import Card from 'components/Card/index'
 import cloudUploadIcon from 'assets/icons/cloud-upload-icon.png'
 import templateImg from 'assets/images/template-img.jpeg'
 import TestimonialWithImg from 'components/TestimonialWithImg/index'
+import Testimonial from 'components/Testimonial/index'
+import templateLogo from 'assets/icons/template-logo.png'
 
 const App = () => {
   return (
@@ -347,7 +349,7 @@ const App = () => {
 </Card>`}
                 </code>
               </div>
-              <div className='flex mx-auto w-fit gap-4 mt-8 pb-16'>
+              <div className='flex mx-auto w-fit gap-4 mt-8 pb-8'>
                 <div className='text-right'>
                   <h3 className='mb-2 underline'>Image Size Values</h3>
                   <p className='text-gray-400 text-sm'>relative to Card width</p>
@@ -372,17 +374,80 @@ const App = () => {
           </Section>
         </Section>
 
-        <Section id='testimonials' className='mb-24'>
-          <h2 className='text-xl mb-6 underline'>Testimonials</h2>
-          <TestimonialWithImg img={templateImg} alt='template image'>
-            <TestimonialWithImg.Quote>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.
-            </TestimonialWithImg.Quote>
-            <TestimonialWithImg.Footer>
-              <p className='font-bold'>Author Name</p>
-              <p className='font-light'>Company</p>
-            </TestimonialWithImg.Footer>
-          </TestimonialWithImg>
+        <Section id='testimonials' className='mb-24 flex flex-col gap-16'>
+          <h2 className='text-xl underline'>Testimonials</h2>
+          <Section className='flex flex-col gap-16'>
+            <h3 className='font-light'>Testimonial With Image</h3>
+            <TestimonialWithImg img={templateImg} alt='template image'>
+              <TestimonialWithImg.Quote>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.
+              </TestimonialWithImg.Quote>
+              <TestimonialWithImg.Footer author='Author Name' company='Company' />
+            </TestimonialWithImg>
+          </Section>
+
+          <Section>
+            <h3 className='font-light'>Usage</h3>
+            <div className='bg-neutral-800 text-neutral-200 px-6 py-6'>
+              <code className='whitespace-pre-wrap'>
+                {`<TestimonialWithImg img={imgSrc} alt='image alt text' imgPosition='top' >
+  <TestimonialWithImg.Quote>
+    Quote
+  </TestimonialWithImg.Quote>
+  <TestimonialWithImg.Footer autor='Author Name' company='Company' />
+</TestimonialWithImg>`}
+              </code>
+            </div>
+            <div className='flex mx-auto w-fit gap-4 mt-8 pb-8'>
+              <div>
+                <h3 className='mb-2 underline'>Image Position Values</h3>
+                <p className='text-transparent text-sm'>_</p>
+                <p><span className='font-bold'>top</span>: object-top</p>
+                <p><span className='font-bold'>center</span>: object-center <span className='text-gray-400 px-2'>(default)</span></p>
+                <p><span className='font-bold'>bottom</span>: object-bottom</p>
+                <p><span className='font-bold'>left</span>: object-left</p>
+                <p><span className='font-bold'>right</span>: object-right</p>
+              </div>
+            </div>
+          </Section>
+
+          <Section className='flex flex-col gap-16 mt-8'>
+            <h3 className='font-light'>Testimonial Without Image</h3>
+            <Testimonial icon={templateLogo} alt='template logo' iconScale='50'>
+              <Testimonial.Quote>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam numquam accusamus quia consectetur natus, recusandae voluptatibus incidunt dolore. Nesciunt debitis ipsam earum rerum, blanditiis totam suscipit modi omnis rem eaque!
+              </Testimonial.Quote>
+              <Testimonial.Footer author='Author Name' company='Company' />
+            </Testimonial>
+          </Section>
+
+          <Section>
+            <h3 className='font-light'>Usage</h3>
+            <div className='bg-neutral-800 text-neutral-200 px-6 py-6'>
+              <code className='whitespace-pre-wrap'>
+                {`<Testimonial icon={iconSrc} alt='icon alt text' iconScale='75' >
+  <Testimonial.Quote>
+    Quote
+  </Testimonial.Quote>
+  <Testimonial.Footer autor='Author Name' company='Company' />
+</Testimonial>`}
+              </code>
+            </div>
+            <div className='flex mx-auto w-fit gap-4 mt-8 pb-16'>
+              <div>
+                <h3 className='mb-2 underline'>Icon Scale Values</h3>
+                <p><span className='font-bold'>50</span>: 50%</p>
+                <p><span className='font-bold'>75</span>: 75%</p>
+                <p><span className='font-bold'>90</span>: 90%</p>
+                <p><span className='font-bold'>95</span>: 95%</p>
+                <p><span className='font-bold'>100</span>: 100% <span className='text-gray-400 px-2'>(default)</span></p>
+                <p><span className='font-bold'>105</span>: 105%</p>
+                <p><span className='font-bold'>110</span>: 110%</p>
+                <p><span className='font-bold'>125</span>: 125%</p>
+                <p><span className='font-bold'>150</span>: 150%</p>
+              </div>
+            </div>
+          </Section>
         </Section>
       </Main>
       <Footer />
